@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* //新增基本样式 */
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  a {
+    @apply text-blue-600 underline;
+  }
+}
+
+
+/* 新增组件类 */
+@layer components {
+  .banner {
+    @apply relative flex flex-wrap bg-indigo-500 px-4 py-3 sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8;
+  }
+
+  /* //添加新的变体类 */
+  @variants hover, focus { 
+    .btn{
+      @apply px-4 py-2 rounded text-white
+    }
+    .btn-primary-400 {
+      @apply btn bg-green-400
+    }
+    .btn-primary-500 {
+      @apply btn bg-green-500
+    }
+  }
+}
+
+/* 新增功能类 */
+@layer utilities {
+  .list-img-\@{
+    list-style-image: url("./at.png");
+  }
+}
